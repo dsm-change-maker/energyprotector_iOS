@@ -1,0 +1,6 @@
+framework module Pods_energyprotector {
+  umbrella header "Pods-energyprotector-umbrella.h"
+
+  export *
+  module * { export * }
+}
