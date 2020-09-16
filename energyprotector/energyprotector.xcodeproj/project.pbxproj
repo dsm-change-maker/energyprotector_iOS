@@ -3,110 +3,139 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0455CE28DB29D0316BA776B3 /* Pods_energyprotector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E513D6D1F631F0718AEA9D37 /* Pods_energyprotector.framework */; };
-		929FF9FB250799F50005BBA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FF9FA250799F50005BBA8 /* AppDelegate.swift */; };
-		929FF9FD250799F50005BBA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FF9FC250799F50005BBA8 /* SceneDelegate.swift */; };
-		929FF9FF250799F50005BBA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FF9FE250799F50005BBA8 /* ViewController.swift */; };
-		929FFA02250799F50005BBA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA00250799F50005BBA8 /* Main.storyboard */; };
-		929FFA04250799F70005BBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA03250799F70005BBA8 /* Assets.xcassets */; };
-		929FFA07250799F70005BBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA05250799F70005BBA8 /* LaunchScreen.storyboard */; };
-		929FFA1125084BD20005BBA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA1025084BD20005BBA8 /* GoogleService-Info.plist */; };
+		20A29468134246841E678DA4 /* Pods_energyprotector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2590FFE18CA69C49CA0A6A /* Pods_energyprotector.framework */; };
+		924279A02510D65700DBC564 /* EnergyControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242799F2510D65700DBC564 /* EnergyControllerViewController.swift */; };
+		924279A72511B02300DBC564 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924279A62511B02300DBC564 /* ChartViewController.swift */; };
+		924279AB25121FFD00DBC564 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924279AA25121FFD00DBC564 /* SettingViewController.swift */; };
+		929FFA1F25090CEC0005BBA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FFA1E25090CEC0005BBA8 /* AppDelegate.swift */; };
+		929FFA2125090CEC0005BBA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FFA2025090CEC0005BBA8 /* SceneDelegate.swift */; };
+		929FFA2625090CEC0005BBA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA2425090CEC0005BBA8 /* Main.storyboard */; };
+		929FFA2825090CEE0005BBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA2725090CEE0005BBA8 /* Assets.xcassets */; };
+		929FFA2B25090CEE0005BBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA2925090CEE0005BBA8 /* LaunchScreen.storyboard */; };
+		929FFA3825091AA30005BBA8 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FFA3725091AA30005BBA8 /* ConnectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		39A9354A9E2CEA7B62CCB617 /* Pods-energyprotector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-energyprotector.release.xcconfig"; path = "Target Support Files/Pods-energyprotector/Pods-energyprotector.release.xcconfig"; sourceTree = "<group>"; };
-		929FF9F7250799F50005BBA8 /* energyprotector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = energyprotector.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		929FF9FA250799F50005BBA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		929FF9FC250799F50005BBA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		929FF9FE250799F50005BBA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		929FFA01250799F50005BBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		929FFA03250799F70005BBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		929FFA06250799F70005BBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		929FFA08250799F70005BBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		929FFA1025084BD20005BBA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		ACDA03C4FE36C78751573DDB /* Pods-energyprotector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-energyprotector.debug.xcconfig"; path = "Target Support Files/Pods-energyprotector/Pods-energyprotector.debug.xcconfig"; sourceTree = "<group>"; };
-		E513D6D1F631F0718AEA9D37 /* Pods_energyprotector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_energyprotector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21B7DA490720D68485EAB7E2 /* Pods-energyprotector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-energyprotector.debug.xcconfig"; path = "Target Support Files/Pods-energyprotector/Pods-energyprotector.debug.xcconfig"; sourceTree = "<group>"; };
+		33B7C2D5DCA62D4D6E967761 /* Pods-energyprotector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-energyprotector.release.xcconfig"; path = "Target Support Files/Pods-energyprotector/Pods-energyprotector.release.xcconfig"; sourceTree = "<group>"; };
+		5F2590FFE18CA69C49CA0A6A /* Pods_energyprotector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_energyprotector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9242799F2510D65700DBC564 /* EnergyControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyControllerViewController.swift; sourceTree = "<group>"; };
+		924279A62511B02300DBC564 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		924279AA25121FFD00DBC564 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		929FFA1B25090CEC0005BBA8 /* energyprotector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = energyprotector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		929FFA1E25090CEC0005BBA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		929FFA2025090CEC0005BBA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		929FFA2525090CEC0005BBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		929FFA2725090CEE0005BBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		929FFA2A25090CEE0005BBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		929FFA2C25090CEE0005BBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		929FFA3725091AA30005BBA8 /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		929FF9F4250799F50005BBA8 /* Frameworks */ = {
+		929FFA1825090CEC0005BBA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0455CE28DB29D0316BA776B3 /* Pods_energyprotector.framework in Frameworks */,
+				20A29468134246841E678DA4 /* Pods_energyprotector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8DBE54B15D6742224D45A962 /* Pods */ = {
+		45717DE6F60599E7E17FBDED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ACDA03C4FE36C78751573DDB /* Pods-energyprotector.debug.xcconfig */,
-				39A9354A9E2CEA7B62CCB617 /* Pods-energyprotector.release.xcconfig */,
+				5F2590FFE18CA69C49CA0A6A /* Pods_energyprotector.framework */,
 			);
-			name = Pods;
-			path = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		929FF9EE250799F50005BBA8 = {
+		929FFA1225090CEC0005BBA8 = {
 			isa = PBXGroup;
 			children = (
-				929FF9F9250799F50005BBA8 /* energyprotector */,
-				929FF9F8250799F50005BBA8 /* Products */,
-				8DBE54B15D6742224D45A962 /* Pods */,
-				FFF3D367FB662217A2E0BB85 /* Frameworks */,
+				929FFA1D25090CEC0005BBA8 /* energyprotector */,
+				929FFA1C25090CEC0005BBA8 /* Products */,
+				9662EF5A952164FB2510AC16 /* Pods */,
+				45717DE6F60599E7E17FBDED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		929FF9F8250799F50005BBA8 /* Products */ = {
+		929FFA1C25090CEC0005BBA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				929FF9F7250799F50005BBA8 /* energyprotector.app */,
+				929FFA1B25090CEC0005BBA8 /* energyprotector.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		929FF9F9250799F50005BBA8 /* energyprotector */ = {
+		929FFA1D25090CEC0005BBA8 /* energyprotector */ = {
 			isa = PBXGroup;
 			children = (
-				929FF9FA250799F50005BBA8 /* AppDelegate.swift */,
-				929FF9FC250799F50005BBA8 /* SceneDelegate.swift */,
-				929FF9FE250799F50005BBA8 /* ViewController.swift */,
-				929FFA00250799F50005BBA8 /* Main.storyboard */,
-				929FFA03250799F70005BBA8 /* Assets.xcassets */,
-				929FFA05250799F70005BBA8 /* LaunchScreen.storyboard */,
-				929FFA08250799F70005BBA8 /* Info.plist */,
-				929FFA1025084BD20005BBA8 /* GoogleService-Info.plist */,
+				929FFA34250917EC0005BBA8 /* Resources */,
+				929FFA33250917050005BBA8 /* Controllers */,
+				929FFA32250916FE0005BBA8 /* Views */,
+				929FFA2C25090CEE0005BBA8 /* Info.plist */,
 			);
 			path = energyprotector;
 			sourceTree = "<group>";
 		};
-		FFF3D367FB662217A2E0BB85 /* Frameworks */ = {
+		929FFA32250916FE0005BBA8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E513D6D1F631F0718AEA9D37 /* Pods_energyprotector.framework */,
+				929FFA2425090CEC0005BBA8 /* Main.storyboard */,
+				929FFA2925090CEE0005BBA8 /* LaunchScreen.storyboard */,
+				929FFA2725090CEE0005BBA8 /* Assets.xcassets */,
 			);
-			name = Frameworks;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		929FFA33250917050005BBA8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				929FFA3725091AA30005BBA8 /* ConnectViewController.swift */,
+				9242799F2510D65700DBC564 /* EnergyControllerViewController.swift */,
+				924279A62511B02300DBC564 /* ChartViewController.swift */,
+				924279AA25121FFD00DBC564 /* SettingViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		929FFA34250917EC0005BBA8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				929FFA1E25090CEC0005BBA8 /* AppDelegate.swift */,
+				929FFA2025090CEC0005BBA8 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9662EF5A952164FB2510AC16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21B7DA490720D68485EAB7E2 /* Pods-energyprotector.debug.xcconfig */,
+				33B7C2D5DCA62D4D6E967761 /* Pods-energyprotector.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		929FF9F6250799F50005BBA8 /* energyprotector */ = {
+		929FFA1A25090CEC0005BBA8 /* energyprotector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 929FFA0B250799F70005BBA8 /* Build configuration list for PBXNativeTarget "energyprotector" */;
+			buildConfigurationList = 929FFA2F25090CEE0005BBA8 /* Build configuration list for PBXNativeTarget "energyprotector" */;
 			buildPhases = (
-				AC21FA25CCCACA328E3EFD24 /* [CP] Check Pods Manifest.lock */,
-				929FF9F3250799F50005BBA8 /* Sources */,
-				929FF9F4250799F50005BBA8 /* Frameworks */,
-				929FF9F5250799F50005BBA8 /* Resources */,
-				14CF2A4D77E1D1273AA1173E /* [CP] Embed Pods Frameworks */,
+				2DDFF9051E5A2A52273AFEF2 /* [CP] Check Pods Manifest.lock */,
+				929FFA1725090CEC0005BBA8 /* Sources */,
+				929FFA1825090CEC0005BBA8 /* Frameworks */,
+				929FFA1925090CEC0005BBA8 /* Resources */,
+				2D620404FFEBCB8485F459BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -114,25 +143,25 @@
 			);
 			name = energyprotector;
 			productName = energyprotector;
-			productReference = 929FF9F7250799F50005BBA8 /* energyprotector.app */;
+			productReference = 929FFA1B25090CEC0005BBA8 /* energyprotector.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		929FF9EF250799F50005BBA8 /* Project object */ = {
+		929FFA1325090CEC0005BBA8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = "김수완";
 				TargetAttributes = {
-					929FF9F6250799F50005BBA8 = {
+					929FFA1A25090CEC0005BBA8 = {
 						CreatedOnToolsVersion = 11.7;
 					};
 				};
 			};
-			buildConfigurationList = 929FF9F2250799F50005BBA8 /* Build configuration list for PBXProject "energyprotector" */;
+			buildConfigurationList = 929FFA1625090CEC0005BBA8 /* Build configuration list for PBXProject "energyprotector" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -140,32 +169,31 @@
 				en,
 				Base,
 			);
-			mainGroup = 929FF9EE250799F50005BBA8;
-			productRefGroup = 929FF9F8250799F50005BBA8 /* Products */;
+			mainGroup = 929FFA1225090CEC0005BBA8;
+			productRefGroup = 929FFA1C25090CEC0005BBA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				929FF9F6250799F50005BBA8 /* energyprotector */,
+				929FFA1A25090CEC0005BBA8 /* energyprotector */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		929FF9F5250799F50005BBA8 /* Resources */ = {
+		929FFA1925090CEC0005BBA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				929FFA07250799F70005BBA8 /* LaunchScreen.storyboard in Resources */,
-				929FFA1125084BD20005BBA8 /* GoogleService-Info.plist in Resources */,
-				929FFA04250799F70005BBA8 /* Assets.xcassets in Resources */,
-				929FFA02250799F50005BBA8 /* Main.storyboard in Resources */,
+				929FFA2B25090CEE0005BBA8 /* LaunchScreen.storyboard in Resources */,
+				929FFA2825090CEE0005BBA8 /* Assets.xcassets in Resources */,
+				929FFA2625090CEC0005BBA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14CF2A4D77E1D1273AA1173E /* [CP] Embed Pods Frameworks */ = {
+		2D620404FFEBCB8485F459BA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,7 +210,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-energyprotector/Pods-energyprotector-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC21FA25CCCACA328E3EFD24 /* [CP] Check Pods Manifest.lock */ = {
+		2DDFF9051E5A2A52273AFEF2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,31 +235,34 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		929FF9F3250799F50005BBA8 /* Sources */ = {
+		929FFA1725090CEC0005BBA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				929FF9FF250799F50005BBA8 /* ViewController.swift in Sources */,
-				929FF9FB250799F50005BBA8 /* AppDelegate.swift in Sources */,
-				929FF9FD250799F50005BBA8 /* SceneDelegate.swift in Sources */,
+				924279A02510D65700DBC564 /* EnergyControllerViewController.swift in Sources */,
+				929FFA3825091AA30005BBA8 /* ConnectViewController.swift in Sources */,
+				929FFA1F25090CEC0005BBA8 /* AppDelegate.swift in Sources */,
+				929FFA2125090CEC0005BBA8 /* SceneDelegate.swift in Sources */,
+				924279A72511B02300DBC564 /* ChartViewController.swift in Sources */,
+				924279AB25121FFD00DBC564 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		929FFA00250799F50005BBA8 /* Main.storyboard */ = {
+		929FFA2425090CEC0005BBA8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				929FFA01250799F50005BBA8 /* Base */,
+				929FFA2525090CEC0005BBA8 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		929FFA05250799F70005BBA8 /* LaunchScreen.storyboard */ = {
+		929FFA2925090CEE0005BBA8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				929FFA06250799F70005BBA8 /* Base */,
+				929FFA2A25090CEE0005BBA8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -239,7 +270,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		929FFA09250799F70005BBA8 /* Debug */ = {
+		929FFA2D25090CEE0005BBA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -299,7 +330,7 @@
 			};
 			name = Debug;
 		};
-		929FFA0A250799F70005BBA8 /* Release */ = {
+		929FFA2E25090CEE0005BBA8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -353,9 +384,9 @@
 			};
 			name = Release;
 		};
-		929FFA0C250799F70005BBA8 /* Debug */ = {
+		929FFA3025090CEE0005BBA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACDA03C4FE36C78751573DDB /* Pods-energyprotector.debug.xcconfig */;
+			baseConfigurationReference = 21B7DA490720D68485EAB7E2 /* Pods-energyprotector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,9 +403,9 @@
 			};
 			name = Debug;
 		};
-		929FFA0D250799F70005BBA8 /* Release */ = {
+		929FFA3125090CEE0005BBA8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39A9354A9E2CEA7B62CCB617 /* Pods-energyprotector.release.xcconfig */;
+			baseConfigurationReference = 33B7C2D5DCA62D4D6E967761 /* Pods-energyprotector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,25 +425,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		929FF9F2250799F50005BBA8 /* Build configuration list for PBXProject "energyprotector" */ = {
+		929FFA1625090CEC0005BBA8 /* Build configuration list for PBXProject "energyprotector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				929FFA09250799F70005BBA8 /* Debug */,
-				929FFA0A250799F70005BBA8 /* Release */,
+				929FFA2D25090CEE0005BBA8 /* Debug */,
+				929FFA2E25090CEE0005BBA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		929FFA0B250799F70005BBA8 /* Build configuration list for PBXNativeTarget "energyprotector" */ = {
+		929FFA2F25090CEE0005BBA8 /* Build configuration list for PBXNativeTarget "energyprotector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				929FFA0C250799F70005BBA8 /* Debug */,
-				929FFA0D250799F70005BBA8 /* Release */,
+				929FFA3025090CEE0005BBA8 /* Debug */,
+				929FFA3125090CEE0005BBA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 929FF9EF250799F50005BBA8 /* Project object */;
+	rootObject = 929FFA1325090CEC0005BBA8 /* Project object */;
 }
