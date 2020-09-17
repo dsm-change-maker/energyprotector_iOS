@@ -10,12 +10,14 @@ import UIKit
 
 class ConnectViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var groupNameTextField: UITextField!
     @IBOutlet var idTextField: UITextField!
     @IBOutlet var pwdTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        groupNameTextField.delegate = self
         idTextField.delegate = self
         pwdTextField.delegate = self
     }

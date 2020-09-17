@@ -11,6 +11,7 @@
 		924279A02510D65700DBC564 /* EnergyControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242799F2510D65700DBC564 /* EnergyControllerViewController.swift */; };
 		924279A72511B02300DBC564 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924279A62511B02300DBC564 /* ChartViewController.swift */; };
 		924279AB25121FFD00DBC564 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924279AA25121FFD00DBC564 /* SettingViewController.swift */; };
+		924279AD2512EBC300DBC564 /* WattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924279AC2512EBC300DBC564 /* WattingViewController.swift */; };
 		929FFA1F25090CEC0005BBA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FFA1E25090CEC0005BBA8 /* AppDelegate.swift */; };
 		929FFA2125090CEC0005BBA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FFA2025090CEC0005BBA8 /* SceneDelegate.swift */; };
 		929FFA2625090CEC0005BBA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA2425090CEC0005BBA8 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		9242799F2510D65700DBC564 /* EnergyControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyControllerViewController.swift; sourceTree = "<group>"; };
 		924279A62511B02300DBC564 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		924279AA25121FFD00DBC564 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		924279AC2512EBC300DBC564 /* WattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WattingViewController.swift; sourceTree = "<group>"; };
 		929FFA1B25090CEC0005BBA8 /* energyprotector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = energyprotector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929FFA1E25090CEC0005BBA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		929FFA2025090CEC0005BBA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				9242799F2510D65700DBC564 /* EnergyControllerViewController.swift */,
 				924279A62511B02300DBC564 /* ChartViewController.swift */,
 				924279AA25121FFD00DBC564 /* SettingViewController.swift */,
+				924279AC2512EBC300DBC564 /* WattingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				924279A02510D65700DBC564 /* EnergyControllerViewController.swift in Sources */,
+				924279AD2512EBC300DBC564 /* WattingViewController.swift in Sources */,
 				929FFA3825091AA30005BBA8 /* ConnectViewController.swift in Sources */,
 				929FFA1F25090CEC0005BBA8 /* AppDelegate.swift in Sources */,
 				929FFA2125090CEC0005BBA8 /* SceneDelegate.swift in Sources */,
@@ -392,6 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5QSBGBP3C;
 				INFOPLIST_FILE = energyprotector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5QSBGBP3C;
 				INFOPLIST_FILE = energyprotector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

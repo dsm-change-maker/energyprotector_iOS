@@ -12,8 +12,6 @@ import Charts
 class ChartViewController: UIViewController, ChartViewDelegate {
     
     var barChart = BarChartView()
-
-    let month : [String] = ["Jan", "Fed", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +30,13 @@ class ChartViewController: UIViewController, ChartViewDelegate {
         
         var entries = [BarChartDataEntry]()
 
-        for x in 0..<10{
+        for x in 0..<12 {
             entries.append(BarChartDataEntry(x: Double(x),
-                                             y: Double(x))
+                                             y: Double(x*x*x))
             )
         }
         
-        let set = BarChartDataSet(entries: entries)
+        let set = BarChartDataSet(entries: entries, label: "에너지 사용량")
         set.colors = ChartColorTemplates.joyful()
         
         let data = BarChartData(dataSet: set)
