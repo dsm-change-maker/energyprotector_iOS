@@ -28,18 +28,25 @@ class ChartViewController: UIViewController, ChartViewDelegate {
         barChart.center = view.center
         view.addSubview(barChart)
         
-        var entries = [BarChartDataEntry]()
+        var entries1 = [BarChartDataEntry]()
+        var entries2 = [BarChartDataEntry]()
 
         for x in 0..<12 {
-            entries.append(BarChartDataEntry(x: Double(x),
+            entries1.append(BarChartDataEntry(x: Double(x),
                                              y: Double(x*x*x))
+            )
+            entries2.append(BarChartDataEntry(x: Double(x),
+                                             y: Double(1000))
             )
         }
         
-        let set = BarChartDataSet(entries: entries, label: "에너지 사용량")
-        set.colors = ChartColorTemplates.joyful()
         
-        let data = BarChartData(dataSet: set)
+        let set1 = BarChartDataSet(entries: entries1, label: "에너지 사용량")
+        let set2 = BarChartDataSet(entries: entries2, label: "평균")
+        set1.setColor(UIColor(displayP3Red: 40/250, green: 39/250, blue: 76/250, alpha: 1))
+        set2.setColor(UIColor.lightGray)
+        
+        let data = BarChartData(dataSets: [set2,set1])
         
         barChart.data = data
     }
