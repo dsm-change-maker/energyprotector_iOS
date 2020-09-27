@@ -38,27 +38,9 @@ class EnergyControllerViewController: UIViewController, UITableViewDelegate, UIT
                         for dataIndex in data {
                             self.devices.append(device(device_id: dataIndex["device_id"] as! String,
                                                   device_type: dataIndex["device_type"] as! String,
-                                                  unit_count: dataIndex["unit_count"] as! Int))
+                                                  unit_count: dataIndex["unit_count"] as! Int,
+                                                  unit_info: dataIndex["unit_info"] as! [Bool]))
                         }
-                        
-                        for device in self.devices {
-                            AF.request(baseURL+"/api/web/units", method: .get, parameters: ["device_id":device.device_id,"device_type":device.device_type],headers: ["authorization": "Bearer "+token]).validate().responseJSON(completionHandler: { res2 in
-                                
-                                switch res2.result {
-                                case .success(let value):
-                                    print(value)
-//                                    let valueNew = value as? [String:Any]
-//                                    if let data = valueNew?["devices"] as? [[String: Any]]{
-//                                    }
-//
-//                                    self.tableView.reloadData()
-                                case .failure(let err):
-                                    print("ERROR : \(err)")
-                                    
-                                }
-                            })
-                        }
-                        
                         self.tableView.reloadData()
                     }
                 case .failure(let err):
@@ -69,9 +51,35 @@ class EnergyControllerViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     @objc func switchChanged(_ sender: UISwitch!){
-        
-        print("change: \(sender.tag + 1)")
         print("the switch is \(sender.isOn ? "ON" : "OFF")")
+        
+        let row = ((sender.tag-30000)%10000)/10
+        let section = ((sender.tag-(row*10))-30000)/10000
+        
+        let parameters : [String: Any] = [
+            "device_id" : devices[section].device_id,
+            "device_type" : devices[section].device_type,
+            "on_off" : sender.isOn,
+            "unit_index" : row
+        ]
+        
+        let alamo = AF.request(baseURL+"/api/device/control", method: .post, parameters:parameters, encoding: JSONEncoding() as ParameterEncoding, headers: ["Content-Type" : "application/json", "authorization": "Bearer "+token]).validate(statusCode: 200..<300)
+        
+        alamo.responseJSON(){ response in
+            switch response.result
+            {
+                //통신성공
+                case .success(let value):
+                    print(value)
+                    
+                //통신실패
+                case .failure(let err):
+                    print("ERROR : \(err)")
+            }
+                    
+            
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,9 +90,13 @@ class EnergyControllerViewController: UIViewController, UITableViewDelegate, UIT
         
         let switchView = UISwitch(frame: .zero)
         switchView.onTintColor = UIColor(red: 71/250, green: 70/250, blue: 102/250, alpha: 1)
-        switchView.setOn(false, animated: true)
-        switchView.tag = indexPath.row
-        switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
+        
+        switchView.setOn(devices[indexPath.section].unit_info[indexPath.row], animated: true)
+       
+        
+        switchView.tag = ((indexPath.section*10000)+30000)+(indexPath.row*10)
+        
+        switchView.addTarget(self, action: #selector(switchChanged(_:)), for: .valueChanged)
         
         cell.accessoryView = switchView
         
@@ -125,4 +137,5 @@ struct device {
     let device_id : String
     let device_type : String
     let unit_count : Int
+    var unit_info : [Bool]
 } 
