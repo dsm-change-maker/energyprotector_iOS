@@ -14,6 +14,8 @@ class ChartViewController: UIViewController, ChartViewDelegate {
     
     var barChart = BarChartView()
     
+    var entries1 = [BarChartDataEntry]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
@@ -39,7 +41,6 @@ class ChartViewController: UIViewController, ChartViewDelegate {
         
         view.addSubview(barChart)
         
-        setChart()
     }
     
     func setChart() {
@@ -48,12 +49,8 @@ class ChartViewController: UIViewController, ChartViewDelegate {
         let xaxis:XAxis = XAxis()
         
         
-        var entries1 = [BarChartDataEntry]()
 
-        for x in 0..<12 {
-            entries1.append(BarChartDataEntry(x: Double(x),
-                                             y: Double(x*x*x))
-            )
+        for _ in 0..<12 {
             xaxis.valueFormatter = formato
             barChart.xAxis.valueFormatter = xaxis.valueFormatter
         }
@@ -74,22 +71,30 @@ class ChartViewController: UIViewController, ChartViewDelegate {
             if let id = UserDefaults.standard.string(forKey: "id"){
                 let parameters: [String: Any] = [
                     "raspberry_group": groupName,
-                    "raspberry_id": id,
-                    "year": false,
-                    "month": true,
-                    "month_n": 12,
-                    "day": false
+                    "raspberry_id": id
                 ]
         
-                AF.request(baseURL+"", method: .get,  parameters:parameters).validate().responseJSON(completionHandler: { res in // <- api url 추가
+                AF.request(baseURL+"/api/web/using-time/"+thisYear(), method: .get,  parameters:parameters).validate().responseJSON(completionHandler: { res in
             
                     switch res.result {
                     case .success(let value):
                         print(value)
                         let valueNew = value as? [String:Any]
-                        if let data = valueNew?[self.thisYear()] as? [[String: Any]]{
-                            // <- 데이터 처리문 추가
+                        if let data = valueNew?["using_time"] as? [[String: Any]]{
+                            
+                            var i = 1
+                            
+                            for dataIndex in data {
+                                
+                                self.entries1.append(BarChartDataEntry(x: Double(i-1),
+                                                                 y: Double(dataIndex[
+                                                                            self.thisYear()+"-"+String(format: "%02d", i)] as! Int)/3600)
+                                
+                                )
+                                i += 1
+                            }
                         }
+                        self.setChart()
                     case .failure(let err):
                         print("ERROR : \(err)")
                     }

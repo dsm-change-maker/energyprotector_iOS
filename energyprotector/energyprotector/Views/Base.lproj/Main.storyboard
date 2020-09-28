@@ -13,7 +13,9 @@
         <scene sceneID="7mb-JG-siH">
             <objects>
                 <navigationController id="xAe-jC-prQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="Cfw-XE-yqF"/>
+                    <tabBarItem key="tabBarItem" title="" image="gearshape.fill" catalog="system" id="Cfw-XE-yqF">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="82J-i0-MXd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -127,12 +129,12 @@
         <!--Tab Bar Controller-->
         <scene sceneID="lrF-GS-b2y">
             <objects>
-                <tabBarController storyboardIdentifier="mainVC" id="EQ8-Me-YpU" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainVC" id="EQ8-Me-YpU" customClass="TabBarController" customModule="energyprotector" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yuw-c4-jAT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.15686274509803921" green="0.15294117647058825" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemYellowColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="Hcu-O4-IC0" kind="relationship" relationship="viewControllers" id="6wa-pJ-cWk"/>
@@ -148,7 +150,17 @@
         <scene sceneID="IU7-WB-qvx">
             <objects>
                 <navigationController id="Hcu-O4-IC0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="lightbulb.slash.fill" catalog="system" id="KUg-ZO-QSt"/>
+                    <tabBarItem key="tabBarItem" title="" image="bolt.fill" catalog="system" id="KUg-ZO-QSt">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="iconName" value="github"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="selectedIconName" value="github"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="Brands Style"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="SJ8-XX-IGb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -206,7 +218,9 @@
         <scene sceneID="QTi-3v-qvO">
             <objects>
                 <navigationController id="xVm-Hy-IJp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="chart.bar.fill" catalog="system" id="fz9-s8-pWT"/>
+                    <tabBarItem key="tabBarItem" title="" image="chart.bar.xaxis" catalog="system" id="fz9-s8-pWT">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vQT-yk-er9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -423,12 +437,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="lightbulb.slash.fill" catalog="system" width="113" height="128"/>
+        <image name="bolt.fill" catalog="system" width="101" height="128"/>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="logo00" width="598" height="125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

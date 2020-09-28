@@ -20,6 +20,7 @@ class EnergyControllerViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(token)
         getData()
         
         tableView.delegate = self
@@ -28,9 +29,9 @@ class EnergyControllerViewController: UIViewController, UITableViewDelegate, UIT
     
     func getData() {
         
-        AF.request(baseURL+"/api/web/devices", method: .get, parameters: [:],headers: ["authorization": "Bearer "+token]).validate().responseJSON(completionHandler: { res1 in
+        AF.request( baseURL+"/api/web/devices?"+now(), method: .get,parameters: [:] ,headers: ["authorization": "Bearer "+token]).validate().responseJSON(completionHandler: { res in
             
-            switch res1.result {
+            switch res.result {
                 case .success(let value):
                     print(value)
                     let valueNew = value as? [String:Any]
@@ -131,6 +132,12 @@ class EnergyControllerViewController: UIViewController, UITableViewDelegate, UIT
         return 100
     }
     
+    func now() -> String{
+        let formatter_time = DateFormatter()
+        formatter_time.dateFormat = "ss"
+        let current_time_string = formatter_time.string(from: Date())
+        return current_time_string
+    }
 }
 
 struct device {
@@ -138,4 +145,5 @@ struct device {
     let device_type : String
     let unit_count : Int
     var unit_info : [Bool]
-} 
+}
+
