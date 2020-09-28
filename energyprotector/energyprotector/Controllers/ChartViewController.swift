@@ -12,23 +12,41 @@ import Alamofire
 
 class ChartViewController: UIViewController, ChartViewDelegate {
     
-    let months = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
     var barChart = BarChartView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-        barChart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         barChart.frame = CGRect(x: 0, y: 0,
-                                width: self.view.frame.size.width,
+                                width: self.view.frame.size.width - 20,
                                 height: self.view.frame.size.width)
         barChart.center = view.center
+        barChart.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        barChart.rightAxis.enabled = false
+        barChart.doubleTapToZoomEnabled = false
+        barChart.xAxis.drawGridLinesEnabled = false
+        barChart.rightAxis.drawGridLinesEnabled = false
+        barChart.rightAxis.drawAxisLineEnabled = false
+        barChart.leftAxis.drawGridLinesEnabled = false
+        barChart.leftAxis.drawAxisLineEnabled = false
+        barChart.xAxis.labelCount = 12
+        barChart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        
         view.addSubview(barChart)
+        
+        setChart()
+    }
+    
+    func setChart() {
+        
+        let formato:BarChartFormatter = BarChartFormatter()
+        let xaxis:XAxis = XAxis()
+        
         
         var entries1 = [BarChartDataEntry]()
 
@@ -36,15 +54,19 @@ class ChartViewController: UIViewController, ChartViewDelegate {
             entries1.append(BarChartDataEntry(x: Double(x),
                                              y: Double(x*x*x))
             )
+            xaxis.valueFormatter = formato
+            barChart.xAxis.valueFormatter = xaxis.valueFormatter
         }
         
         
         let set1 = BarChartDataSet(entries: entries1, label: "에너지 사용량")
         set1.setColor(UIColor(displayP3Red: 40/250, green: 39/250, blue: 76/250, alpha: 1))
         
-        let data = BarChartData()
+        let data = BarChartData(dataSets: [set1])
         
         barChart.data = data
+        
+        
     }
     
     func getData() {
@@ -59,14 +81,14 @@ class ChartViewController: UIViewController, ChartViewDelegate {
                     "day": false
                 ]
         
-                AF.request(baseURL+"/api/web/using-time", method: .get, parameters:parameters).validate().responseJSON(completionHandler: { res in
+                AF.request(baseURL+"", method: .get,  parameters:parameters).validate().responseJSON(completionHandler: { res in // <- api url 추가
             
                     switch res.result {
                     case .success(let value):
                         print(value)
                         let valueNew = value as? [String:Any]
-                        if let data = valueNew?["mon"] as? [[String: Any]]{
-                            
+                        if let data = valueNew?[self.thisYear()] as? [[String: Any]]{
+                            // <- 데이터 처리문 추가
                         }
                     case .failure(let err):
                         print("ERROR : \(err)")
@@ -74,6 +96,24 @@ class ChartViewController: UIViewController, ChartViewDelegate {
                 })
             }
         }
+    }
+    
+    func thisYear() -> String{
+        let formatter_year = DateFormatter()
+        formatter_year.dateFormat = "yyyy"
+        let current_year_string = formatter_year.string(from: Date())
+        return current_year_string
+    }
+    
+    @objc(BarChartFormatter)
+    public class BarChartFormatter: NSObject, IAxisValueFormatter
+    {
+      var months: [String]! = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
+
+        public func stringForValue(_ value: Double, axis: AxisBase?) -> String
+      {
+        return months[Int(value)]
+      }
     }
 
 }
