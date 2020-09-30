@@ -23,7 +23,7 @@ class MainTabBarController: UITabBarController{
       @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
           
           if gesture.direction == .left {
-              if (self.selectedIndex) < 2 { // 슬라이드할 탭바 갯수 지정 (전체 탭바 갯수 - 1)
+              if (self.selectedIndex) < 3 {
                   animateToTab(toIndex: self.selectedIndex+1)
               }
           } else if gesture.direction == .right {
@@ -71,12 +71,10 @@ class MainTabBarController: UITabBarController{
                          initialSpringVelocity: 0,
                          options: .curveEaseOut,
                          animations: {
-                          // Slide the views by -offset
                           fromView.center = CGPoint(x: fromView.center.x - offset, y: fromView.center.y)
                           toView.center = CGPoint(x: toView.center.x - offset, y: toView.center.y)
                           
           }, completion: { finished in
-              // Remove the old view from the tabbar view.
               fromView.removeFromSuperview()
               self.selectedIndex = toIndex
               self.view.isUserInteractionEnabled = true

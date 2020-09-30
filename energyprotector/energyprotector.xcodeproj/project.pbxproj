@@ -21,6 +21,7 @@
 		929FFA2625090CEC0005BBA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA2425090CEC0005BBA8 /* Main.storyboard */; };
 		929FFA2B25090CEE0005BBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA2925090CEE0005BBA8 /* LaunchScreen.storyboard */; };
 		929FFA3825091AA30005BBA8 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FFA3725091AA30005BBA8 /* ConnectViewController.swift */; };
+		92E1D3E425247D99003A6367 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1D3E325247D99003A6367 /* RankingViewController.swift */; };
 		92FCD8112518E58A005970F2 /* FindPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FCD8102518E58A005970F2 /* FindPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		929FFA2A25090CEE0005BBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		929FFA2C25090CEE0005BBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929FFA3725091AA30005BBA8 /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		92E1D3E325247D99003A6367 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		92FCD8102518E58A005970F2 /* FindPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 				9272157D25230C780077A524 /* MainTabBarController.swift */,
 				9242799F2510D65700DBC564 /* EnergyControllerViewController.swift */,
 				924279A62511B02300DBC564 /* ChartViewController.swift */,
+				92E1D3E325247D99003A6367 /* RankingViewController.swift */,
 				924279AA25121FFD00DBC564 /* SettingViewController.swift */,
 				925CDAFB252355BA0087611D /* RoundUIView.swift */,
 			);
@@ -281,6 +284,7 @@
 				929FFA2125090CEC0005BBA8 /* SceneDelegate.swift in Sources */,
 				924279A72511B02300DBC564 /* ChartViewController.swift in Sources */,
 				924279AB25121FFD00DBC564 /* SettingViewController.swift in Sources */,
+				92E1D3E425247D99003A6367 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +432,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5QSBGBP3C;
 				INFOPLIST_FILE = energyprotector/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P5QSBGBP3C;
 				INFOPLIST_FILE = energyprotector/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

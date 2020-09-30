@@ -25,6 +25,7 @@ class EnergyControllerViewController: UIViewController, UITableViewDelegate, UIT
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsSelection = false
     }
     
     func getData() {
