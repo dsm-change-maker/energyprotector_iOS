@@ -74,7 +74,7 @@ class ChartViewController: UIViewController, ChartViewDelegate {
                     "raspberry_id": id
                 ]
         
-                AF.request(baseURL+"/api/web/using-time/"+thisYear(), method: .get,  parameters:parameters).validate().responseJSON(completionHandler: { res in
+                AF.request(baseURL+"/api/web/using-time/"+thisYear()+"?"+now(), method: .get,  parameters:parameters).validate().responseJSON(completionHandler: { res in
             
                     switch res.result {
                     case .success(let value):
@@ -108,6 +108,13 @@ class ChartViewController: UIViewController, ChartViewDelegate {
         formatter_year.dateFormat = "yyyy"
         let current_year_string = formatter_year.string(from: Date())
         return current_year_string
+    }
+    
+    func now() -> String{
+        let formatter_time = DateFormatter()
+        formatter_time.dateFormat = "ss"
+        let current_time_string = formatter_time.string(from: Date())
+        return current_time_string
     }
     
     @objc(BarChartFormatter)

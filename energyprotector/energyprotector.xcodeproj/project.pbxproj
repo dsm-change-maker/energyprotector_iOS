@@ -12,10 +12,13 @@
 		924279A72511B02300DBC564 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924279A62511B02300DBC564 /* ChartViewController.swift */; };
 		924279AB25121FFD00DBC564 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924279AA25121FFD00DBC564 /* SettingViewController.swift */; };
 		924279AD2512EBC300DBC564 /* WattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924279AC2512EBC300DBC564 /* WattingViewController.swift */; };
+		925CDAFC252355BA0087611D /* RoundUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925CDAFB252355BA0087611D /* RoundUIView.swift */; };
+		9272157E25230C780077A524 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9272157D25230C780077A524 /* MainTabBarController.swift */; };
+		92721583252313A80077A524 /* BlackHanSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92721582252313A80077A524 /* BlackHanSans-Regular.ttf */; };
+		9272158825231FEA0077A524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9272158725231FEA0077A524 /* Assets.xcassets */; };
 		929FFA1F25090CEC0005BBA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FFA1E25090CEC0005BBA8 /* AppDelegate.swift */; };
 		929FFA2125090CEC0005BBA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FFA2025090CEC0005BBA8 /* SceneDelegate.swift */; };
 		929FFA2625090CEC0005BBA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA2425090CEC0005BBA8 /* Main.storyboard */; };
-		929FFA2825090CEE0005BBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA2725090CEE0005BBA8 /* Assets.xcassets */; };
 		929FFA2B25090CEE0005BBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929FFA2925090CEE0005BBA8 /* LaunchScreen.storyboard */; };
 		929FFA3825091AA30005BBA8 /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FFA3725091AA30005BBA8 /* ConnectViewController.swift */; };
 		92FCD8112518E58A005970F2 /* FindPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FCD8102518E58A005970F2 /* FindPasswordViewController.swift */; };
@@ -29,11 +32,14 @@
 		924279A62511B02300DBC564 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		924279AA25121FFD00DBC564 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		924279AC2512EBC300DBC564 /* WattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WattingViewController.swift; sourceTree = "<group>"; };
+		925CDAFB252355BA0087611D /* RoundUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIView.swift; sourceTree = "<group>"; };
+		9272157D25230C780077A524 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		92721582252313A80077A524 /* BlackHanSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BlackHanSans-Regular.ttf"; sourceTree = "<group>"; };
+		9272158725231FEA0077A524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929FFA1B25090CEC0005BBA8 /* energyprotector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = energyprotector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929FFA1E25090CEC0005BBA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		929FFA2025090CEC0005BBA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		929FFA2525090CEC0005BBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		929FFA2725090CEE0005BBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929FFA2A25090CEE0005BBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		929FFA2C25090CEE0005BBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929FFA3725091AA30005BBA8 /* ConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,23 @@
 				5F2590FFE18CA69C49CA0A6A /* Pods_energyprotector.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		927215812523135B0077A524 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				92721582252313A80077A524 /* BlackHanSans-Regular.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		9272158A2523203F0077A524 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				929FFA2425090CEC0005BBA8 /* Main.storyboard */,
+				929FFA2925090CEE0005BBA8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		929FFA1225090CEC0005BBA8 = {
@@ -92,9 +115,9 @@
 		929FFA32250916FE0005BBA8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				929FFA2425090CEC0005BBA8 /* Main.storyboard */,
-				929FFA2925090CEE0005BBA8 /* LaunchScreen.storyboard */,
-				929FFA2725090CEE0005BBA8 /* Assets.xcassets */,
+				9272158A2523203F0077A524 /* Storyboards */,
+				9272158725231FEA0077A524 /* Assets.xcassets */,
+				927215812523135B0077A524 /* font */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,9 +128,11 @@
 				924279AC2512EBC300DBC564 /* WattingViewController.swift */,
 				929FFA3725091AA30005BBA8 /* ConnectViewController.swift */,
 				92FCD8102518E58A005970F2 /* FindPasswordViewController.swift */,
+				9272157D25230C780077A524 /* MainTabBarController.swift */,
 				9242799F2510D65700DBC564 /* EnergyControllerViewController.swift */,
 				924279A62511B02300DBC564 /* ChartViewController.swift */,
 				924279AA25121FFD00DBC564 /* SettingViewController.swift */,
+				925CDAFB252355BA0087611D /* RoundUIView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,8 +215,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92721583252313A80077A524 /* BlackHanSans-Regular.ttf in Resources */,
 				929FFA2B25090CEE0005BBA8 /* LaunchScreen.storyboard in Resources */,
-				929FFA2825090CEE0005BBA8 /* Assets.xcassets in Resources */,
+				9272158825231FEA0077A524 /* Assets.xcassets in Resources */,
 				929FFA2625090CEC0005BBA8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				924279A02510D65700DBC564 /* EnergyControllerViewController.swift in Sources */,
+				925CDAFC252355BA0087611D /* RoundUIView.swift in Sources */,
 				924279AD2512EBC300DBC564 /* WattingViewController.swift in Sources */,
+				9272157E25230C780077A524 /* MainTabBarController.swift in Sources */,
 				929FFA3825091AA30005BBA8 /* ConnectViewController.swift in Sources */,
 				929FFA1F25090CEC0005BBA8 /* AppDelegate.swift in Sources */,
 				92FCD8112518E58A005970F2 /* FindPasswordViewController.swift in Sources */,

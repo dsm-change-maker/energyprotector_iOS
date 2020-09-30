@@ -12,6 +12,7 @@ import Alamofire
 class WattingViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
+        sleep(1)
         if let groupName = UserDefaults.standard.string(forKey: "groupName"){
             if let id = UserDefaults.standard.string(forKey: "id"){
                 if let pwd = UserDefaults.standard.string(forKey: "pwd"){
