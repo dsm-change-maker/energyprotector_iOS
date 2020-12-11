@@ -20,6 +20,13 @@ class ConnectViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let groupName = UserDefaults.standard.string(forKey: "groupName"){
+            if let Id = UserDefaults.standard.string(forKey: "id"){
+                groupNameTextField.text = groupName
+                idTextField.text = Id
+            }
+        }
 
         groupNameTextField.delegate = self
         idTextField.delegate = self

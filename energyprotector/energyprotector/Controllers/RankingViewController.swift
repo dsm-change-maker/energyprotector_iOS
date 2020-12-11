@@ -37,7 +37,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
-    }
+    } 
     
     func getMyRank() {
         

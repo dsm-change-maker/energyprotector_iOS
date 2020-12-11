@@ -28,6 +28,14 @@ class EnergyControllerViewController: UIViewController, UITableViewDelegate, UIT
         tableView.allowsSelection = false
     }
     
+    @IBAction func reload(_ sender: Any) {
+        for _ in 0..<devices.count {
+            devices.removeFirst()
+        }
+        getData()
+        tableView.reloadData()
+    }
+    
     func getData() {
         
         AF.request( baseURL+"/api/web/devices?"+now(), method: .get,parameters: [:] ,headers: ["authorization": "Bearer "+token]).validate().responseJSON(completionHandler: { res in
